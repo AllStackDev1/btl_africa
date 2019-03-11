@@ -1,0 +1,14 @@
+{
+    "name": "vendor/btl",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Steve Quarcoo",
+            "email": "stephenquarcoo15@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "ext-mysqli": "^7.2"
+    }
+}
