@@ -9,9 +9,6 @@
       case 'home':
         include 'home.php'; 
         break;
-      case 'the-company':
-        include 'thecompany.php'; 
-        break;
       case 'about-us':
         include 'about.php'; 
         break;
@@ -32,6 +29,27 @@
         break;
       case 'contact-us':
         include 'contact.php'; 
+        break;
+      case 'btl-africa':
+        include 'btl-africa.php'; 
+        break;
+      case 'btl-ghana':
+        include 'btl-ghana.php'; 
+        break;
+      case 'btl-nigeria':
+        include 'btl-nigeria.php'; 
+        break;
+      case 'btl-liberia':
+        include 'btl-liberia.php'; 
+        break;
+      case 'btl-kenya':
+        include 'btl-kenya.php'; 
+        break;
+      case 'btl-sierra-leone':
+        include 'btl-sierra-leone.php'; 
+        break;
+      case 'btl-plus':
+        include 'btl-plus.php'; 
         break;
       default:
         header("Location:error"); 

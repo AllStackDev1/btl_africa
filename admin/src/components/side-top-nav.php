@@ -41,8 +41,11 @@
                 <a class="<?php echo getActiveRoute('add-image'); ?>" href="add-image"><i class="fa fa-qrcode"></i>Add Image</a>
             </li>
             <li>
-                <a class="<?php echo getActiveRoute('add-admin'); ?>" href="add-admin"><i class="fa fa-user-plus"></i> Add New Admin</a>
+                <a class="<?php echo getActiveRoute('add-admin'); ?>" href="add-admin"><i class="fa fa-user-plus"></i> Add Admin</a>
             </li>
+            <li>
+                <a class="<?php echo getActiveRoute('add-team-member'); ?>" href="add-team-member"><i class="fa fa-user-plus"></i> Add Team Member</a>
+            </li>   
         </ul>
 
     </div>

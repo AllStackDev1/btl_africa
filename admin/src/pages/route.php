@@ -14,6 +14,9 @@ if($admin->isLoggedIn()){
       case '/admin/add-admin':
         include 'addAdmin.php';
         break;
+      case '/admin/add-team-member':
+        include 'addTeamMember.php';
+        break;
       default:
         header("Location:/error"); 
         break;

@@ -25,7 +25,7 @@
                             </div>
                             <div class="form-group">
                               <label>Title</label>
-                              <input class="form-control" name="title" placeholder="Title" required />
+                              <input type="text" class="form-control" name="title" placeholder="Title" required />
                             </div>
                             <div class="form-group">
                                 <label>Description</label>

@@ -59,7 +59,25 @@
         <span class="menu-arrow"></span>
         <ul class="submenu">
             <li>
-                <a href="the-company" onclick="route('the-company')">BTL Plus</a>
+                <a href="btl-africa" onclick="route('btl-africa')">BTL Africa</a>
+            </li>
+            <li>
+                <a href="btl-ghana" onclick="route('btl-ghana')">BTL Ghana</a>
+            </li>
+            <li>
+                <a href="btl-nigeria" onclick="route('btl-nigeria')">BTL Nigeria</a>
+            </li>
+            <li>
+                <a href="btl-liberia" onclick="route('btl-liberia')">BTL Liberia</a>
+            </li>
+            <li>
+                <a href="btl-kenya" onclick="route('btl-kenya')">BTL Kenya</a>
+            </li>
+            <li>
+                <a href="btl-sierra-leone" onclick="route('btl-sierra-leone')">BTL Sierra Leone</a>
+            </li>
+            <li>
+                <a href="btl-plus" onclick="route('btl-plus')">BTL Plus</a>
             </li>
             <li>
                 <a href="team-details" onclick="route('team-details')">Team Details</a>
