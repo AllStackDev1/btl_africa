@@ -146,8 +146,7 @@ p {
 
 .bg-home {
     background-image: url(../images/home-bg.jpg);
-    /* padding: 260px 0px 175px 0px; */
-    padding: 20px 0px 5px 0px;
+    padding: 260px 0px 175px 0px;
     background-size: cover;
     position: relative;
     background-position: center center;

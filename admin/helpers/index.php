@@ -82,5 +82,4 @@ function getActiveRoute($routeToMatch){
   }else{
     return '';
   }
-   
 }

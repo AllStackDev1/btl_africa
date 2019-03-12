@@ -1,35 +1,36 @@
 <?php
   include '../components/header.php';
     include '../components/navbar.php';
-    switch ($_SERVER['REQUEST_URI']) {
-      case '/':
+    $path = explode("/", $_SERVER['REQUEST_URI']);
+    switch ($path[1]) {
+      case '':
         include 'home.php'; 
         break;
-      case '/home':
+      case 'home':
         include 'home.php'; 
         break;
-      case '/the-company':
+      case 'the-company':
         include 'thecompany.php'; 
         break;
-      case '/about-us':
+      case 'about-us':
         include 'about.php'; 
         break;
-      case '/services':
+      case 'services':
         include 'services.php'; 
         break;
-      case '/projects':
+      case 'projects':
         include 'projects.php'; 
         break;
-      case '/team':
+      case 'team':
         include 'team.php'; 
         break;
-      case '/team-details':
-        include 'teamDetail.php'; 
+      case 'team-details':
+        include 'team-details.php'; 
         break;
-      case '/career':
+      case 'career':
         include 'career.php'; 
         break;
-      case '/contact-us':
+      case 'contact-us':
         include 'contact.php'; 
         break;
       default:

@@ -84,7 +84,11 @@
 <script src="<?php echo BASE_URL?>src/assets/js/portfolio-filter.js"></script>
 
 <script src="<?php echo BASE_URL?>src/assets/js/app.js"></script>
-
+<script>
+    function route (route){
+        window.location.href = route; 
+    }
+</script>
 <script>
     //owlCarousel
     $("#owl-demo").owlCarousel({

@@ -57,3 +57,12 @@ function isRequired($array_fields) {
   
   return true;
 }
+
+function getActiveRoute($routeToMatch){
+  $route = explode("/", $_SERVER['REQUEST_URI']);
+  if($routeToMatch === $route[1]){
+    return 'active';
+  }else{
+    return '';
+  }
+}

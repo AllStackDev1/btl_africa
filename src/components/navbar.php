@@ -51,45 +51,44 @@
   <!-- Navigation Menu-->
   <ul class="navigation-menu">
 
-    <li class="has-submenu">
-        <a href="home">Home</a>
+    <li class="has-submenu <?php echo getActiveRoute('home'); ?>">
+        <a href="/" onclick="route('/')">Home</a>
     </li>
     <li class="has-submenu">
         <a href="#">The Company</a>
         <span class="menu-arrow"></span>
         <ul class="submenu">
             <li>
-                <a href="the-company">BTL Plus</a>
+                <a href="the-company" onclick="route('the-company')">BTL Plus</a>
             </li>
             <li>
-                <a href="team-details">Team Details</a>
+                <a href="team-details" onclick="route('team-details')">Team Details</a>
             </li>
         </ul>
-        
     </li>
     <li class="has-submenu">
-        <a href="about-us">About</a>
+        <a href="about-us" onclick="route('about-us')">About</a>
     </li>
     <li class="has-submenu">
-        <a href="services">Service</a>
+        <a href="services" onclick="route('services')">Service</a>
     </li>
-    <li class="has-submenu">
-        <a href="projects">Gallery</a>
+    <li class="has-submenu ">
+        <a href="projects" onclick="route('projects')">Gallery</a>
         <span class="menu-arrow"></span>
     </li>
 
     <li class="has-submenu ">
-        <a href="team">Team</a>
+        <a href="team" onclick="route('team')">Team</a>
         <span class="menu-arrow"></span>
     </li>
     <li class="has-submenu ">
-        <a href="services">Career</a>
+        <a href="career" onclick="route('career')">Career</a>
         <span class="menu-arrow"></span>
     </li>
 
 
     <li class="has-submenu">
-        <a href="contact-us">contact</a>
+        <a href="contact-us" onclick="route('contact-us')">contact</a>
     </li>
   </ul>
   <!-- End navigation menu-->
