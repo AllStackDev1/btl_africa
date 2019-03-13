@@ -79,9 +79,6 @@
             <li>
                 <a href="btl-plus" onclick="route('btl-plus')">BTL Plus</a>
             </li>
-            <li>
-                <a href="team-details" onclick="route('team-details')">Team Details</a>
-            </li>
         </ul>
     </li>
     <li class="has-submenu">

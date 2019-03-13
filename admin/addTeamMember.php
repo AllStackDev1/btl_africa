@@ -1,10 +1,20 @@
 <?php include 'core/init.php'; ?>
 <?php
 try{
-  $team = new Team();
+  $admin = new Admin();
   if($admin->isLoggedIn()){
     if(isset($_POST['addTeamMember'])){
       $data = array();
+      if(isset($_FILES['file'])){
+        $name = time()."".$_FILES['file']['name'];
+        $tmp_name = $_FILES['file']['tmp_name'];
+        if(move_uploaded_file($tmp_name, "../uploads/images/team/".$name)){
+          $data['file_name'] = $name;
+        } else {
+          echo "move_uploaded_file function failed for ".$_FILES['file']['name']." ".$_FILES['file']['error']."<br>";
+          return;
+        }
+      }
       $data['position'] = filter_input(INPUT_POST,"position",FILTER_SANITIZE_STRING);
       $data['name'] = filter_input(INPUT_POST,"name",FILTER_SANITIZE_STRING);
       $data['description'] = filter_input(INPUT_POST,"description",FILTER_SANITIZE_STRING);
@@ -14,8 +24,8 @@ try{
       $data['whatsapp'] = filter_input(INPUT_POST,"whatsapp",FILTER_SANITIZE_STRING);
       $isRequired = array("position","name", "description");
       if(isRequired($isRequired)){
-        if($admin->addAdmin($data)){
-          redirect("add-admin","Admin Created Successfully","success");
+        if($admin->addTeamMember($data)){
+          redirect("add-admin","New Team Member Added Successfully","success");
         }else{
           redirect("add-admin", "Failed to Submit document, try again","error");
         }

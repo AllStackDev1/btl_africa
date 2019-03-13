@@ -10,10 +10,14 @@
             $projects = new Project();
             $page->projects =  $projects->getAllProjects();
         }
-        if($path[1] === 'team-details'){
+        if($path[1] === 'team'){
             $team = new Team();
-            $page->team =  $team->getTeamMember($path[2]);
             $page->teams =  $team->getTeamMembers();
+            if(isset($path[2])){
+                $page = new Template('src/pages/team-details.php');
+                $page->teams =  $team->getTeamMembers();
+                $page->team =  $team->getTeamMember($path[2]);
+            }
         }
         echo $page;
     }

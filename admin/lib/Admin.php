@@ -77,6 +77,21 @@ class Admin {
     return $this->db->execute();
   }
 
+  public function addTeamMember($data){
+    $this->db->query("INSERT INTO teams (name, position, description, file_name, facebook, twitter, instagram, whatsapp) 
+    VALUES(:name, :position, :description, :file_name, :facebook, :twitter, :instagram, :whatsapp)");
+    $this->db->bind(":name", $data['name']);
+    $this->db->bind(":position", $data['position']);
+    $this->db->bind(":description", $data['description']);
+    $this->db->bind(":file_name", $data['file_name']);
+    $this->db->bind(":facebook", $data['facebook']);
+    $this->db->bind(":twitter", $data['twitter']);
+    $this->db->bind(":instagram", $data['instagram']);
+    $this->db->bind(":whatsapp", $data['whatsapp']);
+
+    return $this->db->execute();
+  }
+
   public function deleteAdmin($id){
     $this->db->query("DELETE FROM admins WHERE id=:id");
     $this->db->bind(":id",$id);

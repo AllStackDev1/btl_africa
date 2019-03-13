@@ -28,90 +28,78 @@
     <section class="section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="our-team-box mt-2 mb-4">
-                       
+                <?php foreach($teams as $team):?>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="our-team-box mt-2 mb-4">
                             <div class="team-img">
-                                <img src="src/assets/images/team/img-1.jpg" alt="" class="img-fluid d-block rounded">
+                                <img src="<?php echo BASE_URL?>uploads/images/team/<?php echo $team->file_name; ?>" alt="The <?php echo $team->name; ?> image" class="img-fluid d-block rounded">
                                 <div class="our-team-name text-center">
-                                    <h6 class="mb-0 text-white">Gabrial Kojo Appiah</h6>
+                                    <h6 class="mb-0 text-white"><?php echo $team->name; ?></h6>
                                 </div>
                             </div>
-                        
-                        <div class="our-team-overlay">
-                            <div class="item-content text-white text-center p-2">
-                                <div class="item-desc">
-                                  <a href="team-details.html">  <h5 class="text-white mb-0">Gabrial Kojo Appiahh</h5>
-                                    <p class="mb-0 text-white-70">Chief Exercutive Officer, C.E.O</p></a>
-                                    <div class="our-team-box-border mt-3 mb-3"></div>
-                                    <ul class="list-inline mb-0">
-                                        <li class="list-inline-item m-0"><a href="#" class="our-team-icons"><i class="mdi mdi-facebook"></i></a></li>
-                                        <li class="list-inline-item m-0"><a href="#" class="our-team-icons"><i class="mdi mdi-twitter"></i></a></li>
-                                        <li class="list-inline-item m-0"><a href="#" class="our-team-icons"><i class="mdi mdi-instagram"></i></a></li>
-                                        <li class="list-inline-item m-0"><a href="#" class="our-team-icons"><i class="mdi mdi-whatsapp"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="our-team-box mt-2 mb-4">
-                        <div class="team-img">
-                            <img src="src/assets/images/team/img-2.jpg" alt="" class="img-fluid d-block rounded">
-                            <div class="our-team-name text-center">
-                                <h6 class="mb-0 text-white">Samuel Njoroge</h6>
-                            </div>
-                        </div>
-                        <div class="our-team-overlay">
-                            <div class="item-content text-white text-center p-2">
-                                <div class="item-desc">
-                                   <a href="team_details.html"><h5 class="text-white mb-0">Samuel Njoroge</h5>
-                                    <p class="mb-0 text-white-70">Chief Operating Officer, C.O.O</p></a>
-                                    <div class="our-team-box-border mt-3 mb-3"></div>
-                                    <ul class="list-inline mb-0">
-                                        <li class="list-inline-item m-0"><a href="#" class="our-team-icons"><i class="mdi mdi-facebook"></i></a></li>
-                                        <li class="list-inline-item m-0"><a href="#" class="our-team-icons"><i class="mdi mdi-twitter"></i></a></li>
-                                        <li class="list-inline-item m-0"><a href="#" class="our-team-icons"><i class="mdi mdi-instagram"></i></a></li>
-                                        <li class="list-inline-item m-0"><a href="#" class="our-team-icons"><i class="mdi mdi-whatsapp"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="our-team-box mt-2 mb-4">
-                        <div class="team-img">
-                            <img src="src/assets/images/team/img-3.jpg" alt="" class="img-fluid d-block rounded">
-                            <div class="our-team-name text-center">
-                                <h6 class="mb-0 text-white">Elloeny Amande</h6>
-                            </div>
-                        </div>
-                        <div class="our-team-overlay">
-                            <div class="item-content text-white text-center p-2">
-                                <div class="item-desc">
-                                 <a href="src/pages/team__details.html"> <h5 class="text-white mb-0">Elloeny Amande</h5>
-                                    <p class="mb-0 text-white-70">Chief Commercial Officer, C.C.O</p> </a>
-                                    <div class="our-team-box-border mt-3 mb-3"></div>
-                                    <ul class="list-inline mb-0">
-                                        <li class="list-inline-item m-0"><a href="#" class="our-team-icons"><i class="mdi mdi-facebook"></i></a></li>
-                                        <li class="list-inline-item m-0"><a href="#" class="our-team-icons"><i class="mdi mdi-twitter"></i></a></li>
-                                        <li class="list-inline-item m-0"><a href="#" class="our-team-icons"><i class="mdi mdi-instagram"></i></a></li>
-                                        <li class="list-inline-item m-0"><a href="#" class="our-team-icons"><i class="mdi mdi-whatsapp"></i></a></li>
-                                    </ul>
+                            <div class="our-team-overlay">
+                                <div class="item-content text-white text-center p-2">
+                                    <div class="item-desc">
+                                    <a href="/<?php echo $team->id; ?>">  <h5 class="text-white mb-0"><?php echo $team->name; ?></h5>
+                                        <p class="mb-0 text-white-70"><?php echo $team->position; ?></p></a>
+                                        <div class="our-team-box-border mt-3 mb-3"></div>
+                                        <ul class="list-inline mb-0">
+                                            <?php 
+                                                if ($team->facebook){
+                                                    echo "
+                                                    <li class='list-inline-item m-0'>
+                                                        <a href='.$team->facebook.' class='our-team-icons'>
+                                                            <i class='mdi mdi-facebook'>
+                                                            </i>
+                                                        </a>
+                                                    </li>
+                                                    ";
+                                                } 
+                                            ?>
+                                            <?php 
+                                                if ($team->twitter){
+                                                    echo "
+                                                    <li class='list-inline-item m-0'>
+                                                        <a href='.$team->twitter.' class='our-team-icons'>
+                                                            <i class='mdi mdi-twitter'>
+                                                            </i>
+                                                        </a>
+                                                    </li>
+                                                    ";
+                                                } 
+                                            ?>
+                                            <?php 
+                                                if ($team->twitter){
+                                                    echo "
+                                                    <li class='list-inline-item m-0'>
+                                                        <a href='.$team->instagram.' class='our-team-icons'>
+                                                            <i class='mdi mdi-instagram'>
+                                                            </i>
+                                                        </a>
+                                                    </li>
+                                                    ";
+                                                } 
+                                            ?>
+                                            <?php 
+                                                if ($team->twitter){
+                                                    echo "
+                                                    <li class='list-inline-item m-0'>
+                                                        <a href='.$team->whatsapp.' class='our-team-icons'>
+                                                            <i class='mdi mdi-whatsapp'>
+                                                            </i>
+                                                        </a>
+                                                    </li>
+                                                    ";
+                                                } 
+                                            ?>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-            
+                <?php endforeach;?>  
             </div>
-
-
         </div>
     </section>
     <!-- OUR TEAM END -->

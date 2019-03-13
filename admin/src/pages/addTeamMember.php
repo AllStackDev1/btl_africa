@@ -13,7 +13,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                       <?php displayMessage(); ?>
-                        <form role="form" action="/admin/addTeamMember.php" method="POST">
+                        <form role="form" action="/admin/addTeamMember.php" method="POST" enctype="multipart/form-data">
                           <div class="row">
                             <div class="col-lg-6">
                               <div class="form-group">
@@ -30,28 +30,31 @@
                                 <label>Name</label>
                                   <input class="form-control" name="name" placeholder="Full Name" required />
                               </div>
-                            </div>
-                            <div class="col-lg-12">
                               <div class="form-group">
                                   <label>Description</label>
                                   <textarea class="form-control" rows="3" name="description" placeholder="Add a description about this team member" required></textarea>
                               </div>
+                              <div class="form-group">
+                                <label>Images - accept png/jpeg</label>
+                                <input type="file" name="file" accept="image/x-png,image/jpeg" required />
                             </div>
+                            </div>
+                            
                             <div class="col-lg-6">
                               <div class="form-group">
-                                <label>Facebook Page</label>
+                                <label>Facebook</label>
                                   <input type="text" class="form-control" name="facebook" placeholder="Enter facebook page link" />
                               </div>
                               <div class="form-group">
-                                <label>Twitter Page</label>
+                                <label>Twitter</label>
                                   <input type="text" class="form-control" name="twitter" placeholder="Enter twitter page link" />
                               </div>
                               <div class="form-group">
-                                <label>Instagram Page</label>
+                                <label>Instagram</label>
                                   <input type="text" class="form-control" name="instagram" placeholder="Enter instagram page link" />
                               </div>
                               <div class="form-group">
-                                <label>Whatsapp Page</label>
+                                <label>Whatsapp</label>
                                   <input type="tel" class="form-control" name="whatsapp" placeholder="Enter whatsapp number" />
                               </div>
                             </div>

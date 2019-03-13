@@ -34,8 +34,6 @@
                     <li><a class="categories" data-filter=".activations">ACTIVATIONS</a></li>
                     <li><a class="categories" data-filter=".design">DESIGNING</a></li>
                     <li><a class="categories" data-filter=".events">EVENTS</a></li>
-                    
-                    
                 </ul>
             </div>
 
@@ -56,7 +54,7 @@
                         </a>
                     </div>
                 </div>
-							<?php endforeach;?>  
+                <?php endforeach;?>  
             </div>
         </div>
     </section>
