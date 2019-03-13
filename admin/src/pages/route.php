@@ -9,13 +9,13 @@ if($admin->isLoggedIn()){
         include 'dashboard.php';
         break;
       case '/admin/add-image':
-        include 'addImage.php';
+        include 'add-image.php';
         break;
       case '/admin/add-admin':
-        include 'addAdmin.php';
+        include 'add-admin.php';
         break;
       case '/admin/add-team-member':
-        include 'addTeamMember.php';
+        include 'add-team-member.php';
         break;
       default:
         header("Location:/error"); 

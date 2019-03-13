@@ -1,7 +1,17 @@
 <?php
+  $path = explode("/", $_SERVER['REQUEST_URI']);
   include '../components/header.php';
-    include '../components/navbar.php';
-    $path = explode("/", $_SERVER['REQUEST_URI']);
+  include '../components/navbar.php';
+  if(isset($path[2])){
+    switch ($path[1]) {
+      case 'team':
+      include 'team-details.php'; 
+      break;
+    default:
+      header("Location:error"); 
+      break;
+    }
+  } else {
     switch ($path[1]) {
       case '':
         include 'home.php'; 
@@ -55,5 +65,6 @@
         header("Location:error"); 
         break;
     }
-    include '../components/footer.php';
+  }
+  include '../components/footer.php';
 ?>

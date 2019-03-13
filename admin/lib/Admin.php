@@ -78,12 +78,13 @@ class Admin {
   }
 
   public function addTeamMember($data){
-    $this->db->query("INSERT INTO teams (name, position, description, file_name, facebook, twitter, instagram, whatsapp) 
-    VALUES(:name, :position, :description, :file_name, :facebook, :twitter, :instagram, :whatsapp)");
+    $this->db->query("INSERT INTO teams (name, position, description, file_name, email, facebook, twitter, instagram, whatsapp) 
+    VALUES(:name, :position, :description, :file_name, :email, :facebook, :twitter, :instagram, :whatsapp)");
     $this->db->bind(":name", $data['name']);
     $this->db->bind(":position", $data['position']);
     $this->db->bind(":description", $data['description']);
     $this->db->bind(":file_name", $data['file_name']);
+    $this->db->bind(":email", $data['email']);
     $this->db->bind(":facebook", $data['facebook']);
     $this->db->bind(":twitter", $data['twitter']);
     $this->db->bind(":instagram", $data['instagram']);

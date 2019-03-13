@@ -32,15 +32,19 @@
                               </div>
                               <div class="form-group">
                                   <label>Description</label>
-                                  <textarea class="form-control" rows="3" name="description" placeholder="Add a description about this team member" required></textarea>
+                                  <textarea class="form-control" rows="5" name="description" style="max-width:100%" placeholder="Add a description about this team member" required></textarea>
                               </div>
                               <div class="form-group">
                                 <label>Images - accept png/jpeg</label>
                                 <input type="file" name="file" accept="image/x-png,image/jpeg" required />
-                            </div>
+                              </div>
                             </div>
                             
                             <div class="col-lg-6">
+                              <div class="form-group">
+                                <label>Email</label>
+                                  <input type="email" class="form-control" name="email" placeholder="Enter email address" />
+                              </div>
                               <div class="form-group">
                                 <label>Facebook</label>
                                   <input type="text" class="form-control" name="facebook" placeholder="Enter facebook page link" />

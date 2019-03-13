@@ -40,7 +40,7 @@
                             <div class="our-team-overlay">
                                 <div class="item-content text-white text-center p-2">
                                     <div class="item-desc">
-                                    <a href="/<?php echo $team->id; ?>">  <h5 class="text-white mb-0"><?php echo $team->name; ?></h5>
+                                    <a href="team/<?php echo $team->id; ?>">  <h5 class="text-white mb-0"><?php echo $team->name; ?></h5>
                                         <p class="mb-0 text-white-70"><?php echo $team->position; ?></p></a>
                                         <div class="our-team-box-border mt-3 mb-3"></div>
                                         <ul class="list-inline mb-0">

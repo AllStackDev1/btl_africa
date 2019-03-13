@@ -18,6 +18,7 @@ try{
       $data['position'] = filter_input(INPUT_POST,"position",FILTER_SANITIZE_STRING);
       $data['name'] = filter_input(INPUT_POST,"name",FILTER_SANITIZE_STRING);
       $data['description'] = filter_input(INPUT_POST,"description",FILTER_SANITIZE_STRING);
+      $data['email'] = filter_input(INPUT_POST,"email",FILTER_SANITIZE_STRING);
       $data['facebook'] = filter_input(INPUT_POST,"facebook",FILTER_SANITIZE_STRING);
       $data['twitter'] = filter_input(INPUT_POST,"twitter",FILTER_SANITIZE_STRING);
       $data['instagram'] = filter_input(INPUT_POST,"instagram",FILTER_SANITIZE_STRING);
@@ -25,15 +26,15 @@ try{
       $isRequired = array("position","name", "description");
       if(isRequired($isRequired)){
         if($admin->addTeamMember($data)){
-          redirect("add-admin","New Team Member Added Successfully","success");
+          redirect("add-team-member","New Team Member Added Successfully","success");
         }else{
-          redirect("add-admin", "Failed to Submit document, try again","error");
+          redirect("add-team-member", "Failed to Submit document, try again","error");
         }
       }else{
-        redirect("add-admin", "Form must be completed","error");
+        redirect("add-team-member", "Form must be completed","error");
       } 
     } else {
-      redirect("add-admin", "Form must be completed", "error");
+      redirect("add-team-member", "Form must be completed", "error");
     }
   }else{
     echo "admin Must Log IN";

@@ -11,12 +11,11 @@
             $page->projects =  $projects->getAllProjects();
         }
         if($path[1] === 'team'){
-            $team = new Team();
-            $page->teams =  $team->getTeamMembers();
+            $teams = new Team();
+            $page->teams =  $teams->getTeamMembers();
             if(isset($path[2])){
-                $page = new Template('src/pages/team-details.php');
-                $page->teams =  $team->getTeamMembers();
-                $page->team =  $team->getTeamMember($path[2]);
+                $page->teams =  $teams->getTeamMembers();
+                $page->team =  $teams->getTeamMember($path[2]);
             }
         }
         echo $page;

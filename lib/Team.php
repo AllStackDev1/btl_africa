@@ -13,6 +13,6 @@ class Team {
 
   public function getTeamMember($id) {
     $this->db->query("SELECT * FROM teams WHERE id = '$id'");
-    return $this->db->resultSet();
+    return  $this->db->resultSet();
   }
 }
