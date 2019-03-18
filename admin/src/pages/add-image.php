@@ -15,8 +15,8 @@
                       <?php displayMessage(); ?>
                         <form role="form" action="/admin/addImage.php" method="POST" enctype="multipart/form-data">
                             <div class="form-group">
-                                <label>Select Album</label>
-                                <select class="form-control" name="album">
+                                <label>Select Category</label>
+                                <select class="form-control" name="category">
                                     <option value="branding">BRANDING</option>
                                     <option value="activations">ACTIVATIONS</option>
                                     <option value="design">DESIGNING</option>
@@ -33,7 +33,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Images - accept png/jpeg</label>
-                                <input type="file" name="file" accept="image/x-png,image/jpeg" required />
+                                <input type="file" name="file_array[]"  multiple="multiple"  class="form-control" accept="image/x-png,image/jpeg" required />
                             </div>
                             <button type="submit" class="btn btn-default" name="addImage">Submit Button</button>
                         </form>

@@ -22,32 +22,30 @@
             <div class="col-lg-3 col-sm-6">
                 <h6 class="text-white footer-title mt-2 mb-3">Company</h6>
                 <ul class="list-unstyled company-sub-menu">
-                    <li><a href="#" class="text-white-50">Home</a></li>
-                    <li><a href="about-us.html" class="text-white-50">About</a></li>
-                    <li><a href="service.html" class="text-white-50">Services</a></li>
-                    <li><a href="our-team.html" class="text-white-50">Team</a></li>
-                    
+                    <li><a href="<?php echo BASE_URL?>" class="text-white-50">Home</a></li>
+                    <li><a href="<?php echo BASE_URL?>about-us" class="text-white-50">About</a></li>
+                    <li><a href="<?php echo BASE_URL?>services" class="text-white-50">Services</a></li>
+                    <li><a href="<?php echo BASE_URL?>team" class="text-white-50">Team</a></li>
                 </ul>
             </div>
 
             <div class="col-lg-3 col-sm-6">
                 <h6 class="text-white footer-title mt-2 mb-3">We Offer</h6>
                 <ul class="list-unstyled company-sub-menu">
-                    <li><a href="service.html#live_experience" class="text-white-50" >Live Experiences</a></li>
-                    <li><a href="service.html#B2B" class="text-white-50">Enterprise / B2B</a></li>
-                    <li><a href="#" class="text-white-50">Retail</a></li>
-                    <li><a href="#" class="text-white-50">Creative Studio</a></li>
-                    
+                    <li><a href="<?php echo BASE_URL?>service#live_experience" class="text-white-50" >Live Experiences</a></li>
+                    <li><a href="<?php echo BASE_URL?>service#B2B" class="text-white-50">Enterprise / B2B</a></li>
+                    <li><a href="<?php echo BASE_URL?>" class="text-white-50">Retail</a></li>
+                    <li><a href="<?php echo BASE_URL?>" class="text-white-50">Creative Studio</a></li>
                 </ul>
             </div>
 
             <div class="col-lg-3 col-sm-6">
                 <h6 class="text-white footer-title mt-2 mb-3">Solution</h6>
                 <ul class="list-unstyled company-sub-menu">
-                    <li><a href="#" class="text-white-50">For Individual</a></li>
-                    <li><a href="#" class="text-white-50">For Investors</a></li>
-                    <li><a href="#" class="text-white-50">For Business</a></li>
-                    <li><a href="#" class="text-white-50">Project</a></li>
+                    <li><a href="<?php echo BASE_URL?>#" class="text-white-50">For Individual</a></li>
+                    <li><a href="<?php echo BASE_URL?>#" class="text-white-50">For Investors</a></li>
+                    <li><a href="<?php echo BASE_URL?>#" class="text-white-50">For Business</a></li>
+                    <li><a href="<?php echo BASE_URL?>#" class="text-white-50">Project</a></li>
                 </ul>
             </div>
         </div>

@@ -5,24 +5,29 @@ try{
   if($admin->isLoggedIn()){
     if(isset($_POST['addImage'])){
       $data = array();
-      if(isset($_FILES['file'])){
-        $name = time()."".$_FILES['file']['name'];
-        $tmp_name = $_FILES['file']['tmp_name'];
-        // $type = $_FILES['file']['type'];
-        // $size = $_FILES['file']['size'];
-        // $error = $_FILES['file']['error'];
-        if(move_uploaded_file($tmp_name, "../uploads/images/project/".$name)){
-          $data['file_name'] = $name;
-        } else {
-          echo "move_uploaded_file function failed for ".$_FILES['file']['name']." ".$_FILES['file']['error']."<br>";
-          return;
+      if(isset($_FILES['file_array'])){
+        $name_array = $_FILES['file_array']['name'];
+        $tmp_name_array = $_FILES['file_array']['tmp_name'];
+        $type_array = $_FILES['file_array']['type'];
+        $size_array = $_FILES['file_array']['size'];
+        $error_array = $_FILES['file_array']['error'];
+        $files = array();
+        for($i = 0; $i < count($tmp_name_array); $i++){
+          $name = time().$_POST['category'].$name_array[$i];
+          if(move_uploaded_file($tmp_name_array[$i], "../uploads/images/project/".$name)){
+            $files[] = $name;
+          } else {
+            echo "move_uploaded_file function failed for ".$name_array[$i]." ". $error_array ."<br>";
+            return;
+          }
         }
       }
     }
-    $data['album'] = filter_input(INPUT_POST,"album",FILTER_SANITIZE_STRING);
+    $data['category'] = filter_input(INPUT_POST,"category",FILTER_SANITIZE_STRING);
     $data['title'] = filter_input(INPUT_POST,"title",FILTER_SANITIZE_STRING);
-    $data['description'] =  filter_input(INPUT_POST,"description",FILTER_SANITIZE_STRING); 
-    $isRequired = array("album", "title", "description");
+    $data['description'] =  filter_input(INPUT_POST,"description",FILTER_SANITIZE_STRING);
+    $data["files"]  =  implode(SEPARATOR,$files);
+    $isRequired = array("category", "title", "description");
     if(isRequired($isRequired)){
       if($admin->addImage($data)){
         redirect("add-image","Submitted successfully","success");

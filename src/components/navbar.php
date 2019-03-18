@@ -26,7 +26,7 @@
   <div class="container">
   <!-- Logo container-->
   <div>
-  <a href="home" class="logo">
+  <a href="<?php echo BASE_URL?>" class="logo">
   <img src="<?php echo BASE_URL?>src/assets/images/BTL_logo.png" alt="Logo">
   </a>
   </div>
@@ -52,58 +52,58 @@
   <ul class="navigation-menu">
 
     <li class="has-submenu <?php echo getActiveRoute('home'); ?>">
-        <a href="/" onclick="route('/')">Home</a>
+        <a href="<?php echo BASE_URL?>" onclick="route('<?php echo BASE_URL?>')">Home</a>
     </li>
     <li class="has-submenu">
         <a href="#">The Company</a>
         <span class="menu-arrow"></span>
         <ul class="submenu">
             <li>
-                <a href="btl-africa" onclick="route('btl-africa')">BTL Africa</a>
+                <a href="<?php echo BASE_URL?>btl-africa" onclick="route('<?php echo BASE_URL?>btl-africa')">BTL Africa</a>
             </li>
             <li>
-                <a href="btl-ghana" onclick="route('btl-ghana')">BTL Ghana</a>
+                <a href="<?php echo BASE_URL?>btl-ghana" onclick="route('<?php echo BASE_URL?>btl-ghana')">BTL Ghana</a>
             </li>
             <li>
-                <a href="btl-nigeria" onclick="route('btl-nigeria')">BTL Nigeria</a>
+                <a href="<?php echo BASE_URL?>btl-nigeria" onclick="route('<?php echo BASE_URL?>btl-nigeria')">BTL Nigeria</a>
             </li>
             <li>
-                <a href="btl-liberia" onclick="route('btl-liberia')">BTL Liberia</a>
+                <a href="<?php echo BASE_URL?>btl-liberia" onclick="route('<?php echo BASE_URL?>btl-liberia')">BTL Liberia</a>
             </li>
             <li>
-                <a href="btl-kenya" onclick="route('btl-kenya')">BTL Kenya</a>
+                <a href="<?php echo BASE_URL?>btl-kenya" onclick="route('<?php echo BASE_URL?>btl-kenya')">BTL Kenya</a>
             </li>
             <li>
-                <a href="btl-sierra-leone" onclick="route('btl-sierra-leone')">BTL Sierra Leone</a>
+                <a href="<?php echo BASE_URL?>btl-sierra-leone" onclick="route('btl-sierra-leone')">BTL Sierra Leone</a>
             </li>
             <li>
-                <a href="btl-plus" onclick="route('btl-plus')">BTL Plus</a>
+                <a href="<?php echo BASE_URL?>btl-plus" onclick="route('<?php echo BASE_URL?>btl-plus')">BTL Plus</a>
             </li>
         </ul>
     </li>
     <li class="has-submenu">
-        <a href="about-us" onclick="route('about-us')">About</a>
+        <a href="<?php echo BASE_URL?>about-us" onclick="route('<?php echo BASE_URL?>about-us')">About</a>
     </li>
     <li class="has-submenu">
-        <a href="services" onclick="route('services')">Service</a>
+        <a href="<?php echo BASE_URL?>services" onclick="route('<?php echo BASE_URL?>services')">Service</a>
     </li>
     <li class="has-submenu ">
-        <a href="projects" onclick="route('projects')">Gallery</a>
+        <a href="<?php echo BASE_URL?>projects" onclick="route('<?php echo BASE_URL?>projects')">Gallery</a>
         <span class="menu-arrow"></span>
     </li>
 
     <li class="has-submenu ">
-        <a href="team" onclick="route('team')">Team</a>
+        <a href="<?php echo BASE_URL?>team" onclick="route('<?php echo BASE_URL?>team')">Team</a>
         <span class="menu-arrow"></span>
     </li>
     <li class="has-submenu ">
-        <a href="career" onclick="route('career')">Career</a>
+        <a href="<?php echo BASE_URL?>career" onclick="route('<?php echo BASE_URL?>career')">Career</a>
         <span class="menu-arrow"></span>
     </li>
 
 
     <li class="has-submenu">
-        <a href="contact-us" onclick="route('contact-us')">contact</a>
+        <a href="<?php echo BASE_URL?>contact-us" onclick="route('<?php echo BASE_URL?>contact-us')">contact</a>
     </li>
   </ul>
   <!-- End navigation menu-->

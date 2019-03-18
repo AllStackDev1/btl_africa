@@ -40,10 +40,23 @@
             <!-- Gallary -->
             <div class="row projects-wrapper">
             	<?php foreach($projects as $project):?>
-                <div class="col-lg-4 col-md-6 spacing <?php echo $project->album; ?>">
+                <?php 
+                    if($project->files){
+                        $files = explode(SEPARATOR, $project->files);
+                        $filesData = null ;
+                        $url = array();
+                        unset($urls);
+                        foreach($files as $file){
+                            $url =  BASE_URL . "uploads/images/project/".$file;
+                            $urls[] = $url;
+                            $filesData .= "<a class='$project->id' href='$url' title='$project->title'> </a>";
+                        }
+                    }
+                ?>
+                <div class="col-lg-4 col-md-6 spacing <?php echo $project->category; ?>">
                     <div class="item-box">
-                        <a class="mfp-image" href="<?php echo BASE_URL?>uploads/images/project/<?php echo $project->file_name; ?>" title="<?php echo $project->title; ?>">
-                            <img class="item-container img-fluid mx-auto" src="<?php echo BASE_URL?>uploads/images/project/<?php echo $project->file_name; ?>" alt="<?php echo $project->id; ?>" />
+                        <span class="show_album_images" id="<?php echo $project->id; ?>" style="cursor: pointer" title="<?php echo $project->title; ?>">
+                            <img class="item-container img-fluid mx-auto" src="<?php echo $urls[0] ?>" alt="<?php echo $project->id; ?>" />
                             <div class="item-mask our-Project">
                                 <div class="item-caption text-white text-center">
                                     <div class="project-content p-4">
@@ -51,9 +64,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                            <?php echo $filesData; ?>
+                        </span>
                     </div>
                 </div>
+
                 <?php endforeach;?>  
             </div>
         </div>

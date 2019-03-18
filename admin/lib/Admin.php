@@ -50,10 +50,10 @@ class Admin {
   }
 
   public function addImage($data){
-    $this->db->query("INSERT INTO images (`file_name`, `title`, `album`, `description`) VALUES(:file_name, :title, :album, :description)");
-    $this->db->bind(":file_name", $data['file_name']);
+    $this->db->query("INSERT INTO images (`title`, `category`, `files`, `description`) VALUES(:title, :category, :files, :description)");
     $this->db->bind(":title", $data['title']);
-    $this->db->bind(":album", $data['album']);
+    $this->db->bind(":category", $data['category']);
+    $this->db->bind(":files", $data['files']);
     $this->db->bind(":description", $data['description']);
 
     return $this->db->execute();

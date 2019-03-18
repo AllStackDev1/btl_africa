@@ -52,6 +52,20 @@
         }
     });
 
+    $(".show_album_images").click(function() { 
+        var className = $(this).attr('id');
+        $('.' + className).magnificPopup({
+            type: 'image',
+            closeOnContentClick: true,
+            mainClass: 'mfp-fade',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1]
+            }
+        }).click();
+    });
+
 
     // Magnific Popup - IMAGE
     $('.mfp-image').magnificPopup({
