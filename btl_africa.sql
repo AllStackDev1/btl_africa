@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 13, 2019 at 05:33 PM
+-- Generation Time: Mar 18, 2019 at 04:00 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -51,19 +51,12 @@ INSERT INTO `admins` (`id`, `name`, `email`, `password`) VALUES
 
 CREATE TABLE `images` (
   `id` int(11) NOT NULL,
-  `file_name` varchar(300) NOT NULL,
   `title` varchar(45) NOT NULL,
-  `album` varchar(50) NOT NULL,
+  `category` varchar(50) NOT NULL,
+  `files` text NOT NULL,
   `description` text NOT NULL,
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `images`
---
-
-INSERT INTO `images` (`id`, `file_name`, `title`, `album`, `description`, `created_at`) VALUES
-(6, '1552281943img-4.jpg', 'Guinese Maltavation Challenge', 'branding', 'TEST', '2019-03-11 05:25:43');
 
 -- --------------------------------------------------------
 
@@ -117,8 +110,7 @@ ALTER TABLE `admins`
 -- Indexes for table `images`
 --
 ALTER TABLE `images`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `file_name` (`file_name`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `positions`
@@ -146,7 +138,7 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `positions`

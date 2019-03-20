@@ -112,7 +112,7 @@
 <div class="login-page">
   <div class="form">
     <div style="font-size: 14px;"><?php displayMessage(); ?></div>
-    <form class="login-form" action="admin" method="POST">
+    <form class="login-form" action="/admin/doLogin.php" method="POST">
       <input type="text" placeholder="email" name="email" required/>
       <input type="password" placeholder="password" name="password" required/>
       <button type="submit" class="btn btn-success btn-block"  name="do_login">Login</button>

@@ -1,6 +1,8 @@
 <?php
 //start session
 session_start();
+//startup the app
+require_once("core/startup.php");
 //make use of the server and database information
 require_once("config/index.php");
 //make use of helpers

@@ -108,7 +108,7 @@
 
                                 <div class="col-lg-6">
                                     <div class="agency-service-img mt-4">
-                                        <img src="images/service-img/img-1.jpg" class="img-fluid d-block mx-auto">
+                                        <img src="<?php echo BASE_URL?>src/assets/images/service-img/img-1.jpg" class="img-fluid d-block mx-auto">
                                     </div>
                                 </div>
                             </div>
@@ -143,7 +143,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="agency-service-img mt-4">
-                                        <img src="images/service-img/img-2.jpg" class="img-fluid d-block mx-auto">
+                                        <img src="<?php echo BASE_URL?>src/assets/images/service-img/img-2.jpg" class="img-fluid d-block mx-auto">
                                     </div>
                                 </div>
                             </div>
@@ -177,7 +177,7 @@
 
                                 <div class="col-lg-6">
                                     <div class="agency-service-img mt-4">
-                                        <img src="images/service-img/img-3.jpg" class="img-fluid d-block mx-auto">
+                                        <img src="<?php echo BASE_URL?>src/assets/images/service-img/img-3.jpg" class="img-fluid d-block mx-auto">
                                     </div>
                                 </div>
                             </div>
@@ -211,7 +211,7 @@
 
                                 <div class="col-lg-6">
                                     <div class="agency-service-img mt-4">
-                                        <img src="images/service-img/img-4.jpg" class="img-fluid d-block mx-auto">
+                                        <img src="<?php echo BASE_URL?>src/assets/images/service-img/img-4.jpg" class="img-fluid d-block mx-auto">
                                     </div>
                                 </div>
                             </div>
